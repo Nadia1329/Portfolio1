@@ -18,7 +18,7 @@ public class Board {
             return false;
         }
         int index = position - 1;
-        if (cells[index] == 'X' || cells[index] == '0') {
+        if (cells[index] == 'X' || cells[index] == 'O') {
             return false;
         }
         cells[index] = mark;
@@ -54,7 +54,7 @@ public class Board {
             char a = cells[line[0]];
             char b = cells[line[1]];
             char c = cells[line[2]];
-            if (a == b && b == c && (a == 'X' || a == '0')) {
+            if (a == b && b == c && (a == 'X' || a == 'O')) {
                 return a;
             }
         }
@@ -69,5 +69,9 @@ public class Board {
         System.out.println("  ----+------+-----");
         System.out.printf("   %c  |  %c  |  %c%n", cells[6], cells[7], cells[8]);
         System.out.println();
+    }
+
+    public char[] getCells() {
+        return cells;
     }
 }
