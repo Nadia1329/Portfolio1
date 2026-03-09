@@ -14,7 +14,8 @@ public class App {
       game.reset();
       game.getBoard().printBoard();
       while (!game.isGameOver()) {
-        System.out.print("What is your move? ");
+
+        System.out.print(game.getTurnMessage() + " What is your move? ");
         String input = scanner.nextLine().trim();
 
         Integer move = parseMove(input);

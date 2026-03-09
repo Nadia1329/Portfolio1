@@ -28,6 +28,9 @@ public class Game {
         board.reset();
         currentPlayer = 'X';
     }
-
+    
+    public String getTurnMessage() {
+        return "Player" + currentPlayer + "'s turn.";
+    }
     
 }
